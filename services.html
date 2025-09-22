@@ -628,27 +628,8 @@
         </style>
     </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="grid-nav">
-                <a href="/breakaway-digital-2/" class="brand">
-                    <img src="main-icon.png" alt="Main Icon" class="logo-icon"/>
-                    <img src="main-text.png" alt="Main Text" class="logo-text"/>
-                </a>
-                <div class="nav-menu">
-                    <a href="/breakaway-digital-2/" class="nav-link">Home</a>
-                    <a href="/breakaway-digital-2/about.html" class="nav-link">About</a>
-                    <a href="/breakaway-digital-2/who-i-work-with.html" class="nav-link w-nav-link">Who I work with</a>
-                    <a href="/breakaway-digital-2/services.html" class="nav-link w--current">Services</a>
-                    <a href="/breakaway-digital-2/contact.html" class="nav-link">Contact</a>
-                </div>
-                <div class="right-nav">
-                    <a href="/breakaway-digital-2/contact.html" class="button-link-hover">Contact now</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- Navigation - Loaded via JavaScript -->
+    <div id="navbar-container"></div>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -1092,8 +1073,18 @@
     <!-- Footer Section - Loaded via JavaScript -->
     <div id="footer-container"></div>
 
-    <!-- Load Footer -->
+    <!-- Load Navbar and Footer -->
     <script>
+        // Load navbar content
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading navbar:', error);
+            });
+        
         // Load footer content
         fetch('footer.html')
             .then(response => response.text())
