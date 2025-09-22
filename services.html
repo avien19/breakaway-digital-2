@@ -21,612 +21,111 @@
         .nav-link:hover { color: #4a5568; }
         .nav-link.w--current { text-decoration: underline; }
         .right-nav { display: flex; align-items: center; gap: 1rem; }
-        .nav-right-link { color: #002748; text-decoration: none; font-weight: 500; }
         .button-link-hover { background: #002748; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; display: inline-block; transition: all 0.3s ease; }
         .button-link-hover:hover { background: #1a3a5c; transform: translateY(-1px); }
         
         /* Services Page Styles */
         .hero-section { padding: 90px 0; background: white; margin-top: 70px; }
-        .grid-simple-service { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 4rem; 
-            align-items: center; 
-        }
-        .service-content-wrap { }
-        .service-title-wrap { margin-bottom: 3rem; }
-        .service-section-title h1 { 
-            font-size: 3.5rem; 
-            font-weight: bold; 
-            color: #002748; 
-            margin-bottom: 1.5rem; 
-            line-height: 1.1; 
-        }
-        .service-description { 
-            font-size: 1.2rem; 
-            color: #4a5568; 
-            line-height: 1.6; 
-            margin-bottom: 2rem; 
-        }
-        .service-list-wrap { }
-        .service-list-title { 
-            font-size: 1.5rem; 
-            font-weight: bold; 
-            color: #002748; 
-            margin-bottom: 1.5rem; 
-        }
-        .service-list { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 1rem; 
-        }
-        .service-list-item { 
-            background: #f8f9fa; 
-            padding: 1rem; 
-            border-radius: 8px; 
-            text-align: center; 
-            transition: all 0.3s ease; 
-        }
-        .service-list-item:hover { 
-            background: #e9ecef; 
-            transform: translateY(-2px); 
-        }
-        .service-list-item .text-black { 
-            color: #002748; 
-            font-weight: 500; 
-            margin: 0; 
-        }
-        .service-simple-image-wrap { }
-        .service-image { 
-            width: 100%; 
-            height: 500px; 
-            object-fit: cover; 
-            border-radius: 12px; 
+        .hero-contact-wrap { text-align: center; margin-bottom: 4rem; }
+        .hero-contact-wrap h1 { font-size: 3.5rem; font-weight: bold; color: #002748; margin-bottom: 1.5rem; line-height: 1.1; }
+        .hero-contact-wrap p { font-size: 1.2rem; color: #4a5568; max-width: 600px; margin: 0 auto 3rem; line-height: 1.6; }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
         }
         
-        /* Benefits Section */
-        .benefits-simple-section { 
-            background: #f8f9fa; 
-            padding: 6rem 0; 
-        }
-        .benefit-simple-content-wrap { }
-        .grid-simple-benefit { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 4rem; 
-            align-items: center; 
-            margin-bottom: 4rem; 
-        }
-        .benefit-simple-image-wrap { }
-        .benefit-simple-image { 
-            width: 100%; 
-            height: 550px; 
-            object-fit: cover; 
-            border-radius: 12px; 
-        }
-        .benefit-simple-item h2 { 
-            font-size: 2.5rem; 
-            font-weight: bold; 
-            color: #002748; 
-            margin-bottom: 1.5rem; 
-            line-height: 1.2; 
-        }
-        .benefit-simple-item p { 
-            font-size: 1.1rem; 
-            color: #4a5568; 
-            line-height: 1.6; 
-            margin-bottom: 2rem; 
-        }
-        .benefit-simple-list { 
-            list-style: none; 
-            padding: 0; 
-            margin: 0 0 2rem 0; 
-        }
-        .benefit-simple-list-item { 
-            color: #4a5568; 
-            margin-bottom: 0.75rem; 
-            position: relative; 
-            padding-left: 1.5rem; 
-        }
-        .benefit-simple-list-item::before { 
-            content: '•'; 
-            color: #F05A2B; 
-            font-weight: bold; 
-            position: absolute; 
-            left: 0; 
-        }
-        .grid-benefit-detail { 
-            display: grid; 
-            grid-template-columns: repeat(4, 1fr); 
-            gap: 2rem; 
-        }
-        .benefit-item { 
-            text-align: center; 
-            padding: 2rem 1rem; 
-        }
-        .benefit-title { 
-            font-size: 1.2rem; 
-            font-weight: bold; 
-            color: #002748; 
-            margin-bottom: 1rem; 
-        }
-        .gray-text { 
-            color: #4a5568; 
-            font-size: 0.9rem; 
-            line-height: 1.5; 
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        /* Pricing Section */
-        .pricing-section { 
-            background: white; 
-            padding: 6rem 0; 
-        }
-        .pricing-section-title { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 4rem; 
-        }
-        .pricing-inner-title h2 { 
-            font-size: 2.5rem; 
-            font-weight: bold; 
-            color: #002748; 
-            margin-bottom: 1rem; 
-        }
-        .pricing-description { 
-            color: #4a5568; 
-            font-size: 1.1rem; 
-        }
-        .title-button-link { }
-        .button-link { 
-            color: #002748; 
-            text-decoration: none; 
-            font-weight: 500; 
-            display: flex; 
-            align-items: center; 
-            gap: 0.5rem; 
-        }
-        .button-link:hover { 
-            color: #F05A2B; 
-        }
-        .button-link-icon { 
-            width: 16px; 
-            height: 16px; 
-        }
-        .grid-pricing { 
-            display: grid; 
-            grid-template-columns: 1fr 2fr; 
-            gap: 4rem; 
-        }
-        .pricing-info-item { 
-            background: #f8f9fa; 
-            padding: 3rem; 
-            border-radius: 12px; 
-        }
-        .pricing-info-title-wrap { 
-            margin-bottom: 2rem; 
-        }
-        .pricing-info-title { 
-            font-size: 1.5rem; 
-            font-weight: bold; 
-            color: #002748; 
-            margin-bottom: 1rem; 
-        }
-        .pricing-info-title-wrap div { 
-            color: #4a5568; 
-            margin-bottom: 1.5rem; 
-        }
-        .pricing-email { 
-            display: flex; 
-            align-items: center; 
-            gap: 1rem; 
-        }
-        .email-icon-wrap { 
-            width: 24px; 
-            height: 24px; 
-            background: #002748; 
-            border-radius: 4px; 
-        }
-        .email-info { }
-        .email-info .text-black { 
-            color: #002748; 
-            font-weight: 500; 
-            margin-bottom: 0.25rem; 
-        }
-        .email-text-link { 
-            color: #F05A2B; 
-            text-decoration: none; 
-        }
-        .email-text-link:hover { 
-            text-decoration: underline; 
-        }
-        .pricing-item-wrap { }
-        .pricing-tabs { }
-        .pricing-tabs-menu { 
-            display: flex; 
-            background: #f8f9fa; 
-            border-radius: 8px; 
-            padding: 0.25rem; 
-            margin-bottom: 2rem; 
-        }
-        .pricing-tab-link { 
-            flex: 1; 
-            padding: 0.75rem 1rem; 
-            text-align: center; 
-            border-radius: 6px; 
-            text-decoration: none; 
-            transition: all 0.3s ease; 
-        }
-        .pricing-tab-link.w--current { 
-            background: #002748; 
-            color: white; 
-        }
-        .pricing-tab-link:not(.w--current) { 
-            color: #4a5568; 
-        }
-        .pricing-tab-link:not(.w--current):hover { 
-            color: #002748; 
-        }
-        .pricing-text { 
-            font-weight: 500; 
-        }
-        .pricing-tabs-content { }
-        .pricing-tab-pane { 
-            display: none; 
-        }
-        .pricing-tab-pane.w--tab-active { 
-            display: block; 
-        }
-        .grid-pricing-item { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 2rem; 
-        }
-        .pricing-item { 
-            background: white; 
-            border: 1px solid #e9ecef; 
-            border-radius: 12px; 
-            overflow: hidden; 
-            transition: all 0.3s ease; 
-        }
-        .pricing-item:hover { 
-            box-shadow: 0 8px 25px rgba(0, 39, 72, 0.1); 
-            transform: translateY(-2px); 
-        }
-        .pricing-inner-item { 
-            padding: 2rem; 
-        }
-        .pricing-title-wrap { 
-            margin-bottom: 1.5rem; 
-        }
-        .pricing-title { 
-            font-size: 1.2rem; 
-            font-weight: bold; 
-            color: #002748; 
-            margin-bottom: 0.5rem; 
-        }
-        .pricing-price { 
-            font-size: 2rem; 
-            font-weight: bold; 
-            color: #002748; 
-            margin: 0; 
-        }
-        .pricing-span { 
-            font-size: 1rem; 
-            font-weight: normal; 
-            color: #4a5568; 
-        }
-        .pricing-button-wrap { 
-            margin-bottom: 1.5rem; 
-        }
-        .pricing-list { 
-            list-style: none; 
-            padding: 0; 
-            margin: 0; 
-        }
-        .pricing-list-item { 
-            color: #4a5568; 
-            margin-bottom: 0.75rem; 
-            position: relative; 
-            padding-left: 1.5rem; 
-        }
-        .pricing-list-item::before { 
-            content: '•'; 
-            color: #F05A2B; 
-            font-weight: bold; 
-            position: absolute; 
-            left: 0; 
-        }
-        .pricing-bottom-item { 
-            background: #f8f9fa; 
-            padding: 1rem 2rem; 
-            text-align: center; 
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
         
-        /* Review Section */
-        .review-section { 
-            background: #002748; 
-            color: white; 
-            padding: 4rem 0; 
-        }
-        .container-medium { 
-            max-width: 1000px; 
-            margin: 0 auto; 
-            padding: 0 40px; 
-        }
-        .review-bg-wrap { }
-        .review-item { 
-            display: grid; 
-            grid-template-columns: auto 1fr; 
-            gap: 2rem; 
-            align-items: center; 
-        }
-        .review-avatar-item { 
-            display: flex; 
-            align-items: center; 
-            gap: 1rem; 
-        }
-        .review-image-wrap { }
-        .review-avatar-image { 
-            width: 60px; 
-            height: 60px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-        }
-        .review-avatar-info { }
-        .review-avatar-name { 
-            font-size: 1.1rem; 
-            font-weight: bold; 
-            color: white; 
-            margin: 0 0 0.25rem 0; 
-        }
-        .review-avatar-position { 
-            color: #ccc; 
-            font-size: 0.9rem; 
-        }
-        .review-avatar-logo-wrap { }
-        .review-avatar-logo { 
-            height: 30px; 
-            width: auto; 
-        }
-        .review-description { 
-            color: #ccc; 
-            font-size: 1.1rem; 
-            line-height: 1.6; 
-            margin: 0; 
+        .service-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #002748;
+            margin-bottom: 1rem;
+            line-height: 1.2;
         }
         
-        /* FAQ Section */
-        .faqs-section { 
-            background: white; 
-            padding: 6rem 0; 
+        .service-value-prop {
+            font-size: 1.1rem;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-style: italic;
         }
-        .container-small { 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 0 40px; 
+        
+        .service-benefits {
+            margin-top: 1.5rem;
         }
-        .section-title { 
-            text-align: center; 
-            margin-bottom: 4rem; 
+        
+        .benefits-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #002748;
+            margin-bottom: 1rem;
         }
-        .section-title h2 { 
-            font-size: 2.5rem; 
-            font-weight: bold; 
-            color: #002748; 
-            margin-bottom: 1rem; 
+        
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .section-title p { 
-            color: #4a5568; 
-            font-size: 1.1rem; 
-        }
-        .faqs-item-wrap { }
-        .accordion-item { 
-            border-bottom: 1px solid #e9ecef; 
-            margin-bottom: 1rem; 
-        }
-        .accordion-heading { 
-            padding: 1.5rem 0; 
-            cursor: pointer; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-        }
-        .accordion-title { 
-            font-size: 1.1rem; 
-            font-weight: 600; 
-            color: #002748; 
-            margin: 0; 
-        }
-        .work-line-wrap { 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
+        
+        .benefits-list li {
+            font-size: 1rem;
+            color: #4a5568;
+            margin-bottom: 0.75rem;
             position: relative;
-            width: 20px;
-            height: 20px;
+            padding-left: 1.5rem;
+            line-height: 1.5;
         }
-        .work-line-hr { 
-            width: 20px; 
-            height: 2px; 
-            background: #002748; 
+        
+        .benefits-list li::before {
+            content: '•';
+            color: #002748;
+            font-weight: bold;
             position: absolute;
-        }
-        .work-line-vr { 
-            width: 2px; 
-            height: 20px; 
-            background: #002748; 
-            position: absolute;
-            transition: transform 0.3s ease; 
-        }
-        .accordion-item.active .work-line-vr { 
-            transform: rotate(90deg); 
-        }
-        .accordion-content { 
-            max-height: 0; 
-            overflow: hidden; 
-            transition: max-height 0.3s ease; 
-        }
-        .accordion-item.active .accordion-content { 
-            max-height: 200px; 
-        }
-        .accordion-description { 
-            color: #4a5568; 
-            line-height: 1.6; 
-            margin: 0 0 1.5rem 0; 
+            left: 0;
         }
         
-        /* Other Services Section */
-        .other-services-section { 
-            background: #f8f9fa; 
-            padding: 6rem 0; 
-        }
-        .grid-other-service { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 2rem; 
-        }
-        .service-other-item { 
-            background: white; 
-            border-radius: 12px; 
-            overflow: hidden; 
-            text-decoration: none; 
-            color: inherit; 
-            transition: all 0.3s ease; 
-        }
-        .service-other-item:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 10px 25px rgba(0, 39, 72, 0.15); 
-        }
-        .service-other-item .service-image { 
-            width: 100%; 
-            height: 200px; 
-            object-fit: cover; 
-        }
-        .service-other-item .service-title { 
-            padding: 1.5rem; 
-            font-size: 1.1rem; 
-            font-weight: 600; 
-            color: #002748; 
-            text-align: center; 
-            margin: 0; 
+        .cta-section {
+            background: #f8f9fa;
+            padding: 4rem 0;
+            text-align: center;
+            margin-top: 4rem;
         }
         
-        /* CTA Section */
-        .cta-section { 
-            background: white; 
-            padding: 6rem 0; 
-        }
-        .section-center-title { 
-            text-align: center; 
-        }
-        .cta-simple-title { 
-            font-size: 2.5rem; 
-            font-weight: bold; 
-            color: #002748; 
-            margin-bottom: 1rem; 
-        }
-        .cta-button-item { 
-            display: flex; 
-            justify-content: center; 
-            gap: 2rem; 
-            margin-top: 3rem; 
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #002748;
+            margin-bottom: 1.5rem;
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .grid-simple-service {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .service-list {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .grid-simple-benefit {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .grid-benefit-detail {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .pricing-section-title {
-                flex-direction: column;
-                gap: 2rem;
-                text-align: center;
-            }
-            
-            .grid-pricing {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .grid-pricing-item {
-                grid-template-columns: 1fr;
-            }
-            
-            .review-item {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .grid-other-service {
-                grid-template-columns: 1fr;
-            }
-            
-            .cta-button-item {
-                flex-direction: column;
-                align-items: center;
-            }
+        .cta-description {
+            font-size: 1.2rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
-        @media (max-width: 480px) {
-            .service-list {
-                grid-template-columns: 1fr;
-            }
-            
-            .grid-benefit-detail {
-                grid-template-columns: 1fr;
-            }
-            
-            .service-section-title h1 {
-                font-size: 2.5rem;
-            }
-            
-            .benefit-simple-item h2 {
-                font-size: 2rem;
-            }
-            }
-            
-            /* Responsive Design for Services Grid */
-            @media (max-width: 1024px) {
-                .services-grid {
-                    grid-template-columns: repeat(2, 1fr) !important;
-                }
-            }
-            
-            @media (max-width: 768px) {
-                .services-grid {
-                    grid-template-columns: 1fr !important;
-                }
-                
-                .service-card {
-                    padding: 1.5rem !important;
-                }
-                
-                .service-card h3 {
-                    font-size: 1.1rem !important;
-                }
-                
-                .service-card p {
-                    font-size: 0.85rem !important;
-                }
-            }
-        </style>
-    </head>
+    </style>
+</head>
 <body>
     <!-- Navigation - Loaded via JavaScript -->
     <div id="navbar-container"></div>
@@ -634,439 +133,130 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <div class="grid-simple-service">
-                <div class="service-content-wrap">
-                    <div class="service-title-wrap">
-                        <div class="service-section-title">
-                            <h1>Technology Strategy & Consulting</h1>
-                            <p class="service-description">We help leaders turn business goals into practical technology roadmaps. By aligning technology with business strategy, clients avoid spending on solutions that don't move the needle and instead focus on initiatives that support growth and drive real business value.</p>
-                        </div>
-                        <div>
-                            <a href="/contact.html" class="button-link-hover">Get started now</a>
-                        </div>
-                    </div>
-                    <div class="service-list-wrap">
-                        <h2 class="service-list-title"></h2>
-                        <div class="service-list">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="service-simple-image-wrap">
-                    <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/68319d96212398b55ae2337d_ca5c1b5fa074cc7d4ad3475d48b74aed_service-01.jpg" 
-                         alt="Business strategy consultation" 
-                         class="service-image">
-                </div>
+            <div class="hero-contact-wrap">
+                <h1>Our IT Consulting Services</h1>
+                <p>Comprehensive technology solutions to help your business navigate digital transformation, optimize systems, and build scalable, future-ready infrastructure.</p>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits-simple-section">
+    <!-- Services Section -->
+    <section class="services-section">
         <div class="container">
-            <div class="benefit-simple-content-wrap">
-                <div class="grid-simple-benefit">
-                    <div class="benefit-simple-image-wrap">
-                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/685285895944d88a025a8816_service-image.jpg" 
-                             alt="Professional consultant working" 
-                             class="benefit-simple-image">
-                    </div>
-                    <div class="benefit-simple-item">
-                        <div>
-                            <h2>Technology isn't just tools — it's the foundation of modern business success.</h2>
-                            <p>In today's digital landscape, technology decisions can make or break your business. We help you navigate complex technology choices, avoid costly mistakes, and build systems that truly support your business goals. Our approach ensures every technology investment delivers measurable value.</p>
-                        </div>
-                        <ul class="benefit-simple-list">
-                            <li class="benefit-simple-list-item">
-                                <div>Align technology with business strategy</div>
-                            </li>
-                            <li class="benefit-simple-list-item">
-                                <div>Identify high-value automation opportunities</div>
-                            </li>
-                            <li class="benefit-simple-list-item">
-                                <div>Assess and improve security posture</div>
-                            </li>
-                            <li class="benefit-simple-list-item">
-                                <div>Build practical, achievable roadmaps</div>
-                            </li>
-                        </ul>
-                        <div>
-                            <a href="/contact.html" class="button-link-hover">Get more detail</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-benefit-detail">
-                    <div class="benefit-item">
-                        <h3 class="benefit-title">Technology Strategy</h3>
-                        <p class="gray-text">Turn business goals into practical technology roadmaps with clear priorities and budgets</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h3 class="benefit-title">AI Readiness</h3>
-                        <p class="gray-text">Evaluate your organization's readiness for AI adoption and identify automation opportunities</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h3 class="benefit-title">Security Assessment</h3>
-                        <p class="gray-text">Pragmatic evaluation of cyber-security maturity with actionable improvement plans</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h3 class="benefit-title">Governance Framework</h3>
-                        <p class="gray-text">Establish controls to prioritize projects, manage risks, and ensure strategic alignment</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Detailed Services Section -->
-    <section class="detailed-services-section" style="background: white; padding: 6rem 0;">
-        <div class="container">
-            <div class="section-title" style="text-align: center; margin-bottom: 4rem;">
-                <h2 style="font-size: 2.5rem; font-weight: bold; color: #002748; margin-bottom: 1rem;">Our Technology Services</h2>
-                <p style="color: #4a5568; font-size: 1.1rem;">Comprehensive technology strategy services designed to align your technology investments with business objectives</p>
-            </div>
-            
-            <!-- Services Grid - Compact View -->
-            <div class="services-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem;">
+            <div class="services-grid">
+                
                 <!-- Technology Strategy & Roadmap -->
-                <div class="service-card" data-service="strategy" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s ease; position: relative; border-left: 4px solid #F05A2B;">
-                    <h3 style="font-size: 1.2rem; font-weight: bold; color: #002748; margin-bottom: 1rem;">Technology Strategy & Roadmap</h3>
-                    <p style="color: #4a5568; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Help leaders turn business goals into practical technology roadmaps. Align technology with business strategy to focus on initiatives that support growth.</p>
-                    <div style="color: #F05A2B; font-size: 0.9rem; font-weight: 500;">Click for details →</div>
+                <div class="service-card">
+                    <h2 class="service-title">Technology Strategy & Roadmap</h2>
+                    <p class="service-value-prop">Help leaders turn business goals into a practical technology roadmap. By aligning technology with business strategy, clients avoid spending on solutions that don't move the needle and instead focus on initiatives that support growth.</p>
+                    
+                    <div class="service-benefits">
+                        <h3 class="benefits-title">Key Benefits & Approach:</h3>
+                        <ul class="benefits-list">
+                            <li>Interview executives to understand business strategy and pain points</li>
+                            <li>Map current-state people, processes and technology</li>
+                            <li>Identify gaps in technology, under-utilised systems, and opportunities (e.g., AI, automation)</li>
+                            <li>Build a multi-year roadmap with workstreams, timelines and budgets</li>
+                            <li>Provide alternative scenarios (quick wins vs. long-term investments) and use cases with pros/cons</li>
+                            <li>Establish a governance cadence; the roadmap becomes a tool for continuous improvement</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- AI Readiness Assessment -->
-                <div class="service-card" data-service="ai" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s ease; position: relative; border-left: 4px solid #F05A2B;">
-                    <h3 style="font-size: 1.2rem; font-weight: bold; color: #002748; margin-bottom: 1rem;">AI Readiness Assessment</h3>
-                    <p style="color: #4a5568; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Evaluate organizational readiness for AI adoption. Determine if business processes and data are suitable for AI and identify automation opportunities.</p>
-                    <div style="color: #F05A2B; font-size: 0.9rem; font-weight: 500;">Click for details →</div>
+                <div class="service-card">
+                    <h2 class="service-title">AI Readiness Assessment</h2>
+                    <p class="service-value-prop">Evaluate whether the organisation is ready to adopt automation or AI. The assessment determines if business processes and data are suitable for AI and highlights high-value automation opportunities.</p>
+                    
+                    <div class="service-benefits">
+                        <h3 class="benefits-title">Key Benefits & Approach:</h3>
+                        <ul class="benefits-list">
+                            <li>Work with executives to define an AI vision aligned with business goals</li>
+                            <li>Catalogue current business processes and map them to key capabilities; identify pain points that could benefit from automation</li>
+                            <li>Assess data quality, availability and governance</li>
+                            <li>Evaluate technical infrastructure and skills to handle AI projects</li>
+                            <li>Score each dimension to produce a readiness rating and recommend short-term pilots and long-term projects</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Cyber Security Assessment -->
-                <div class="service-card" data-service="security" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s ease; position: relative; border-left: 4px solid #F05A2B;">
-                    <h3 style="font-size: 1.2rem; font-weight: bold; color: #002748; margin-bottom: 1rem;">Cyber Security Assessment</h3>
-                    <p style="color: #4a5568; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Pragmatic evaluation of cyber-security maturity. High-level assessment of policies, procedures, and staff awareness with improvement roadmap.</p>
-                    <div style="color: #F05A2B; font-size: 0.9rem; font-weight: 500;">Click for details →</div>
+                <div class="service-card">
+                    <h2 class="service-title">Cyber Security Assessment</h2>
+                    <p class="service-value-prop">Provide a pragmatic evaluation of the organisation's cyber-security maturity. This is not a penetration test but a high-level assessment of policies, procedures, vendor controls and staff awareness. It highlights weaknesses and produces a roadmap to reach the desired maturity level.</p>
+                    
+                    <div class="service-benefits">
+                        <h3 class="benefits-title">Key Benefits & Approach:</h3>
+                        <ul class="benefits-list">
+                            <li>Review existing policies (acceptable-use, password management, incident response) and ensure they address risks such as malware, phishing, and data breach</li>
+                            <li>Use the Australian ASD Essential Eight strategies as a baseline but also plan to ISO27001 or NIST CSF</li>
+                            <li>Assess third-party vendors' security posture and ensure contracts include security provisions</li>
+                            <li>Survey staff awareness and provide training recommendations</li>
+                            <li>Compile findings into a maturity matrix and create a risk-based improvement plan</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Governance & Controls -->
-                <div class="service-card" data-service="governance" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s ease; position: relative; border-left: 4px solid #F05A2B;">
-                    <h3 style="font-size: 1.2rem; font-weight: bold; color: #002748; margin-bottom: 1rem;">Governance & Controls</h3>
-                    <p style="color: #4a5568; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Establish governance framework to prioritize technology projects, manage risks and ensure alignment with business strategy.</p>
-                    <div style="color: #F05A2B; font-size: 0.9rem; font-weight: 500;">Click for details →</div>
+                <div class="service-card">
+                    <h2 class="service-title">Governance & Controls</h2>
+                    <p class="service-value-prop">Establish a simple governance framework to prioritise technology projects, manage risks and ensure alignment with business strategy. Effective project prioritisation aligns projects with strategy to reduce waste, quantify value and build an achievable roadmap.</p>
+                    
+                    <div class="service-benefits">
+                        <h3 class="benefits-title">Key Benefits & Approach:</h3>
+                        <ul class="benefits-list">
+                            <li>Facilitate a workshop to define strategic criteria (value, risk, cost, urgency) and simple weighted scoring to rank projects</li>
+                            <li>Align a technology risk management approach to existing business frameworks or define a new approach</li>
+                            <li>Create a risk register and a risk matrix</li>
+                            <li>Set up a governance cadence (e.g., monthly steering committee) to review priorities and adjust as conditions change</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Capability Assessment & RACI -->
-                <div class="service-card" data-service="capability" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s ease; position: relative; border-left: 4px solid #F05A2B;">
-                    <h3 style="font-size: 1.2rem; font-weight: bold; color: #002748; margin-bottom: 1rem;">Capability Assessment & RACI</h3>
-                    <p style="color: #4a5568; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Determine if IT department has right skills and capacity. Identify gaps and plan training, hiring or outsourcing.</p>
-                    <div style="color: #F05A2B; font-size: 0.9rem; font-weight: 500;">Click for details →</div>
+                <div class="service-card">
+                    <h2 class="service-title">Capability Assessment & RACI</h2>
+                    <p class="service-value-prop">Determine whether the IT department (or outsourced providers) has the right skills and capacity. Identify gaps and plan training, hiring or outsourcing.</p>
+                    
+                    <div class="service-benefits">
+                        <h3 class="benefits-title">Key Benefits & Approach:</h3>
+                        <ul class="benefits-list">
+                            <li>Define critical IT processes (e.g., service desk, infrastructure management, security, development)</li>
+                            <li>Build a RACI matrix showing who is Responsible, Accountable, Consulted and Informed for each process</li>
+                            <li>Conduct a skills gap analysis: identify important skills, assess current skills using surveys, interviews or performance reviews, and rate them using a numerical scale</li>
+                            <li>Decide whether gaps will be filled by training (courses, mentorship, certifications) or hiring/outsourcing</li>
+                            <li>Produce a capability uplift plan with timelines and budget</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- IT Infrastructure Review -->
-                <div class="service-card" data-service="infrastructure" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s ease; position: relative; border-left: 4px solid #F05A2B;">
-                    <h3 style="font-size: 1.2rem; font-weight: bold; color: #002748; margin-bottom: 1rem;">IT Infrastructure Review</h3>
-                    <p style="color: #4a5568; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Evaluate current hardware, software and support agreements. Identify aging components and recommend upgrades or cloud migration.</p>
-                    <div style="color: #F05A2B; font-size: 0.9rem; font-weight: 500;">Click for details →</div>
+                <div class="service-card">
+                    <h2 class="service-title">Specific Technology Requirements (IT Infrastructure Review)</h2>
+                    <p class="service-value-prop">Evaluate the organisation's current hardware, software and support agreements, highlighting ageing or unsupported components and recommending upgrades or cloud migration. Regular infrastructure assessments help maintain efficiency, prevent disruptions and ensure technology supports business objectives.</p>
+                    
+                    <div class="service-benefits">
+                        <h3 class="benefits-title">Key Benefits & Approach:</h3>
+                        <ul class="benefits-list">
+                            <li>Create an asset register of physical devices, software and cloud services</li>
+                            <li>Review maintenance history and update logs; schedule future maintenance</li>
+                            <li>Identify equipment approaching end-of-life and compare capabilities to operational requirements, planning for upgrades or replacements</li>
+                            <li>Assess software licences, support agreements and backup/disaster recovery arrangements</li>
+                            <li>Recommend a technology investment roadmap or cloud migration strategy</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Service Detail Modal/Expanded View -->
-            <div id="/breakaway-digital-2/services.html" style="display: none; background: #f8f9fa; padding: 3rem; border-radius: 12px; border-left: 4px solid #F05A2B; margin-top: 2rem;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-                    <h3 id="service-title" style="font-size: 1.8rem; font-weight: bold; color: #002748; margin: 0;"></h3>
-                    <button id="close-detail" style="background: #002748; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">Close</button>
-                </div>
-                <p id="service-description" style="color: #4a5568; font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;"></p>
-                <div class="service-benefits">
-                    <h4 style="font-size: 1.1rem; font-weight: 600; color: #002748; margin-bottom: 1rem;">Key Benefits & Approach:</h4>
-                    <ul id="service-benefits-list" style="list-style: none; padding: 0; margin: 0;"></ul>
-                </div>
             </div>
         </div>
     </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing-section">
-        <div class="container">
-            <div class="pricing-section-title">
-                <div class="pricing-inner-title">
-                    <h2>Choose your growth plan</h2>
-                    <p class="pricing-description">We offer flexible pricing models to fit businesses of all sizes—from startups to enterprises.</p>
-                </div>
-                <div class="title-button-link">
-                    <a href="/contact.html" class="button-link">
-                        <div>Explore pricing</div>
-                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/68358e0ea4d690c4aa10c3a6_button-arrow.svg" alt="Icon" class="button-link-icon"/>
-                    </a>
-                </div>
-            </div>
-            <div class="grid-pricing">
-                <div class="pricing-info-item">
-                    <div class="pricing-info-title-wrap">
-                        <div>
-                            <h3 class="pricing-info-title">Start your free discovery call</h3>
-                            <div>Ready to explore how our consulting solutions can help your business thrive?</div>
-                        </div>
-                        <a href="/contact.html" class="button-link-hover">Book a call</a>
-                    </div>
-                    <div class="pricing-email">
-                        <div class="email-icon-wrap"></div>
-                        <div class="email-info">
-                            <div class="text-black">Want to email us directly?</div>
-                            <a href="mailto:hello@example.com" class="email-text-link">hello@example.com</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="pricing-item-wrap">
-                    <div class="pricing-tabs">
-                        <div class="pricing-tabs-menu">
-                            <a href="#" class="pricing-tab-link" data-tab="monthly">
-                                <div class="pricing-text">Monthly</div>
-                            </a>
-                            <a href="#" class="pricing-tab-link w--current" data-tab="yearly">
-                                <div class="pricing-text">Yearly</div>
-                            </a>
-                        </div>
-                        <div class="pricing-tabs-content">
-                            <div class="pricing-tab-pane" id="monthly-tab">
-                                <div class="grid-pricing-item">
-                                    <div class="pricing-item">
-                                        <div class="pricing-inner-item">
-                                            <div class="pricing-title-wrap">
-                                                <h3 class="pricing-title">Starter plan</h3>
-                                                <h3 class="pricing-price">$499 <span class="pricing-span">/ month</span></h3>
-                                            </div>
-                                            <div class="pricing-button-wrap">
-                                                <a href="/contact.html" class="button-link-hover">Get started</a>
-                                            </div>
-                                            <ul class="pricing-list">
-                                                <li class="pricing-list-item">
-                                                    <div>Initial business assessment</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>2 strategy sessions (1 hour each)</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>Competitor & Market overview</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>Email support (up to 7 days post-session)</div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="pricing-bottom-item">
-                                            <div class="gray-text">Best for: Market entry and early scaling</div>
-                                        </div>
-                                    </div>
-                                    <div class="pricing-item">
-                                        <div class="pricing-inner-item">
-                                            <div class="pricing-title-wrap">
-                                                <h3 class="pricing-title">Growth partner plan</h3>
-                                                <h3 class="pricing-price">$1,499 <span class="pricing-span">/ month</span></h3>
-                                            </div>
-                                            <div class="pricing-button-wrap">
-                                                <a href="/contact.html" class="button-link-hover">Schedule a free consultation</a>
-                                            </div>
-                                            <ul class="pricing-list">
-                                                <li class="pricing-list-item">
-                                                    <div>Everything in starter plan</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>Monthly consulting (4 sessions/month)</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>Dedicated business strategist</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>Priority support via email & chat</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>Quarterly progress review</div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="pricing-bottom-item">
-                                            <div class="gray-text">Best for: Market entry and early scaling</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pricing-tab-pane w--tab-active" id="yearly-tab">
-                                <div class="grid-pricing-item">
-                                    <div class="pricing-item">
-                                        <div class="pricing-inner-item">
-                                            <div class="pricing-title-wrap">
-                                                <h3 class="pricing-title">Starter plan</h3>
-                                                <h3 class="pricing-price">$449 <span class="pricing-span">/ month</span></h3>
-                                            </div>
-                                            <div class="pricing-button-wrap">
-                                                <a href="/contact.html" class="button-link-hover">Get started</a>
-                                            </div>
-                                            <ul class="pricing-list">
-                                                <li class="pricing-list-item">
-                                                    <div>Initial business assessment</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>2 strategy sessions (1 hour each)</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>Competitor & Market overview</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>Email support (up to 7 days post-session)</div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="pricing-bottom-item">
-                                            <div class="gray-text">Best for: Market entry and early scaling</div>
-                                        </div>
-                                    </div>
-                                    <div class="pricing-item">
-                                        <div class="pricing-inner-item">
-                                            <div class="pricing-title-wrap">
-                                                <h3 class="pricing-title">Growth partner plan</h3>
-                                                <h3 class="pricing-price">$1,304 <span class="pricing-span">/ month</span></h3>
-                                            </div>
-                                            <div class="pricing-button-wrap">
-                                                <a href="/contact.html" class="button-link-hover">Schedule a free consultation</a>
-                                            </div>
-                                            <ul class="pricing-list">
-                                                <li class="pricing-list-item">
-                                                    <div>Everything in starter plan</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>Monthly consulting (4 sessions/month)</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>Dedicated business strategist</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>Priority support via email & chat</div>
-                                                </li>
-                                                <li class="pricing-list-item">
-                                                    <div>Quarterly progress review</div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="pricing-bottom-item">
-                                            <div class="gray-text">Best for: Market entry and early scaling</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Review Section -->
-    <section class="review-section">
-        <div class="container-medium">
-            <div class="review-bg-wrap">
-                <div class="review-item">
-                    <div class="review-avatar-item">
-                        <div class="review-image-wrap">
-                            <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/6836e5f5a4694c074d2325de_52291f00d7062ab738d0995727ef25e8_Smiling%20Asian%20Woman.jpg" 
-                                 alt="Amanda Lewis" 
-                                 class="review-avatar-image">
-                        </div>
-                        <div class="review-avatar-info">
-                            <h3 class="review-avatar-name">Amanda Lewis</h3>
-                            <div class="review-avatar-position">Director of Strategy</div>
-                        </div>
-                        <div class="review-avatar-logo-wrap">
-                            <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/683e9d19d02cb0a1bb9f0225_client-06.svg" 
-                                 alt="Client Logo" 
-                                 class="review-avatar-logo">
-                        </div>
-                    </div>
-                    <p class="review-description">Within the first three months, we saw a 35% boost in our sales performance and streamlined several underperforming areas of our operation. Our company was growing fast, but our internal culture needed alignment with our strategic goals.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faqs-section">
-        <div class="container-small">
-            <div class="section-title">
-                <h2>Frequently Asked Questions</h2>
-                <p>We've compiled answers to the most common questions clients ask about our technology strategy and consulting services.</p>
-            </div>
-            <div class="faqs-item-wrap">
-                <div class="accordion-item">
-                    <div class="accordion-heading">
-                        <h3 class="accordion-title">What types of technology consulting do you offer?</h3>
-                        <div class="work-line-wrap">
-                            <div class="work-line-hr"></div>
-                            <div class="work-line-vr"></div>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="accordion-description">We offer comprehensive technology strategy services including technology roadmaps, AI readiness assessments, cyber security evaluations, governance frameworks, capability assessments, and IT infrastructure reviews. Our services are designed for businesses of all sizes looking to align technology with business goals.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-heading">
-                        <h3 class="accordion-title">How long does a typical technology assessment take?</h3>
-                        <div class="work-line-wrap">
-                            <div class="work-line-hr"></div>
-                            <div class="work-line-vr"></div>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="accordion-description">Most of our technology assessments range between 2 to 8 weeks, depending on the scope and complexity. For comprehensive technology strategy projects, we typically work over 6 to 12 weeks to ensure thorough analysis and practical recommendations.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-heading">
-                        <h3 class="accordion-title">Do you help with AI implementation or just readiness assessment?</h3>
-                        <div class="work-line-wrap">
-                            <div class="work-line-hr"></div>
-                            <div class="work-line-vr"></div>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="accordion-description">We focus on strategic assessment and planning rather than hands-on implementation. Our AI readiness assessment helps you understand if your organization is ready for AI adoption, identifies high-value opportunities, and provides a roadmap for implementation. We work with your team to ensure successful execution.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-heading">
-                        <h3 class="accordion-title">What's included in your technology strategy package?</h3>
-                        <div class="work-line-wrap">
-                            <div class="work-line-hr"></div>
-                            <div class="work-line-vr"></div>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="accordion-description">Our packages include executive interviews, current-state mapping, gap analysis, multi-year roadmaps with budgets, alternative scenarios, governance frameworks, and ongoing support. Each engagement is customized to your specific business needs and technology landscape.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <div class="section-title section-center-title">
-                <h2 class="cta-simple-title">Take the first step toward smarter technology decisions today</h2>
-                <p>Reach out and let's start a conversation that aligns your technology with your business goals.</p>
-            </div>
-            <div class="cta-button-item">
-                <div>
-                    <a href="/about.html" class="button-link-hover">See our case studies</a>
-                </div>
-                <div>
-                    <a href="/contact.html" class="button-link">
-                        <div>Contact sales</div>
-                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/68358e0ea4d690c4aa10c3a6_button-arrow.svg" alt="Icon" class="button-link-icon"/>
-                    </a>
-                </div>
-            </div>
+            <h2 class="cta-title">Ready to Transform Your Technology?</h2>
+            <p class="cta-description">Let's discuss how Breakaway Digital can help your organization navigate digital transformation and build future-ready solutions.</p>
+            <a href="/breakaway-digital-2/contact.html" class="button-link-hover">Get Started Today</a>
         </div>
     </section>
 
@@ -1094,181 +284,8 @@
             .catch(error => {
                 console.error('Error loading footer:', error);
                 // Fallback footer if loading fails
-                document.getElementById('footer-container').innerHTML = '<footer class="footer-section" style="background: #002748; color: white; padding: 4rem 0 2rem;"><div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 40px;"><p style="text-align: center; color: white; padding: 2rem;">© 2024 Copora. All rights reserved.</p></div></footer>';
+                document.getElementById('footer-container').innerHTML = '<footer class="footer-section" style="background: #002748; color: white; padding: 4rem 0 2rem;"><div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 40px;"><p style="text-align: center; color: white; padding: 2rem;">© 2024 Breakaway Digital. All rights reserved.</p></div></footer>';
             });
-    </script>
-
-    <!-- JavaScript for Interactive Elements -->
-    <script>
-        // Service data
-        const serviceData = {
-            strategy: {
-                title: "Technology Strategy & Roadmap",
-                description: "Help leaders turn business goals into a practical technology roadmap. By aligning technology with business strategy, clients avoid spending on solutions that don't move the needle and instead focus on initiatives that support growth.",
-                benefits: [
-                    "Interview executives to understand business strategy and pain points",
-                    "Map current-state people, processes and technology",
-                    "Identify gaps in technology, under-utilised systems, and opportunities (e.g., AI, automation)",
-                    "Build a multi-year roadmap with workstreams, timelines and budgets",
-                    "Provide alternative scenarios (quick wins vs. long-term investments) and use cases with pros/cons",
-                    "Establish a governance cadence; the roadmap becomes a tool for continuous improvement"
-                ]
-            },
-            ai: {
-                title: "AI Readiness Assessment",
-                description: "Evaluate whether the organisation is ready to adopt automation or AI. The assessment determines if business processes and data are suitable for AI and highlights high-value automation opportunities.",
-                benefits: [
-                    "Work with executives to define an AI vision aligned with business goals",
-                    "Catalogue current business processes and map them to key capabilities; identify pain points that could benefit from automation",
-                    "Assess data quality, availability and governance",
-                    "Evaluate technical infrastructure and skills to handle AI projects",
-                    "Score each dimension to produce a readiness rating and recommend short-term pilots and long-term projects"
-                ]
-            },
-            security: {
-                title: "Cyber Security Assessment",
-                description: "Provide a pragmatic evaluation of the organisation's cyber-security maturity. This is not a penetration test but a high-level assessment of policies, procedures, vendor controls and staff awareness. It highlights weaknesses and produces a roadmap to reach the desired maturity level.",
-                benefits: [
-                    "Review existing policies (acceptable-use, password management, incident response) and ensure they address risks such as malware, phishing, and data breach",
-                    "Use the Australian ASD Essential Eight strategies as a baseline but also plan to ISO27001 or NIST CSF",
-                    "Assess third-party vendors' security posture and ensure contracts include security provisions",
-                    "Survey staff awareness and provide training recommendations",
-                    "Compile findings into a maturity matrix and create a risk-based improvement plan"
-                ]
-            },
-            governance: {
-                title: "Governance & Controls",
-                description: "Establish a simple governance framework to prioritise technology projects, manage risks and ensure alignment with business strategy. Effective project prioritisation aligns projects with strategy to reduce waste, quantify value and build an achievable roadmap.",
-                benefits: [
-                    "Facilitate a workshop to define strategic criteria (value, risk, cost, urgency) and simple weighted scoring to rank projects",
-                    "Align a technology risk management approach to existing business frameworks or define a new approach",
-                    "Create a risk register and a risk matrix",
-                    "Set up a governance cadence (e.g., monthly steering committee) to review priorities and adjust as conditions change"
-                ]
-            },
-            capability: {
-                title: "Capability Assessment & RACI",
-                description: "Determine whether the IT department (or outsourced providers) has the right skills and capacity. Identify gaps and plan training, hiring or outsourcing.",
-                benefits: [
-                    "Define critical IT processes (e.g., service desk, infrastructure management, security, development)",
-                    "Build a RACI matrix showing who is Responsible, Accountable, Consulted and Informed for each process",
-                    "Conduct a skills gap analysis: identify important skills, assess current skills using surveys, interviews or performance reviews, and rate them using a numerical scale",
-                    "Decide whether gaps will be filled by training (courses, mentorship, certifications) or hiring/outsourcing",
-                    "Produce a capability uplift plan with timelines and budget"
-                ]
-            },
-            infrastructure: {
-                title: "IT Infrastructure Review",
-                description: "Evaluate the organisation's current hardware, software and support agreements, highlighting ageing or unsupported components and recommending upgrades or cloud migration. Regular infrastructure assessments help maintain efficiency, prevent disruptions and ensure technology supports business objectives.",
-                benefits: [
-                    "Create an asset register of physical devices, software and cloud services",
-                    "Review maintenance history and update logs; schedule future maintenance",
-                    "Identify equipment approaching end-of-life and compare capabilities to operational requirements, planning for upgrades or replacements",
-                    "Assess software licences, support agreements and backup/disaster recovery arrangements",
-                    "Recommend a technology investment roadmap or cloud migration strategy"
-                ]
-            }
-        };
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Service Cards Interaction
-            const serviceCards = document.querySelectorAll('.service-card');
-            const serviceDetail = document.getElementById('/breakaway-digital-2/services.html');
-            const serviceTitle = document.getElementById('service-title');
-            const serviceDescription = document.getElementById('service-description');
-            const serviceBenefitsList = document.getElementById('service-benefits-list');
-            const closeDetail = document.getElementById('close-detail');
-
-            serviceCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    const serviceType = this.getAttribute('data-service');
-                    const service = serviceData[serviceType];
-                    
-                    if (service) {
-                        // Update content
-                        serviceTitle.textContent = service.title;
-                        serviceDescription.textContent = service.description;
-                        
-                        // Clear and populate benefits list
-                        serviceBenefitsList.innerHTML = '';
-                        service.benefits.forEach(benefit => {
-                            const li = document.createElement('li');
-                            li.style.color = '#4a5568';
-                            li.style.marginBottom = '0.75rem';
-                            li.style.position = 'relative';
-                            li.style.paddingLeft = '1.5rem';
-                            li.innerHTML = `• ${benefit}`;
-                            serviceBenefitsList.appendChild(li);
-                        });
-                        
-                        // Show detail section
-                        serviceDetail.style.display = 'block';
-                        
-                        // Scroll to detail section
-                        serviceDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                });
-
-                // Add hover effects
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px)';
-                    this.style.boxShadow = '0 8px 25px rgba(0, 39, 72, 0.15)';
-                });
-
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = 'none';
-                });
-            });
-
-            // Close detail section
-            closeDetail.addEventListener('click', function() {
-                serviceDetail.style.display = 'none';
-            });
-
-            // Pricing Tabs
-            const tabLinks = document.querySelectorAll('.pricing-tab-link');
-            const tabPanes = document.querySelectorAll('.pricing-tab-pane');
-            
-            tabLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Remove active class from all tabs
-                    tabLinks.forEach(tab => tab.classList.remove('w--current'));
-                    tabPanes.forEach(pane => pane.classList.remove('w--tab-active'));
-                    
-                    // Add active class to clicked tab
-                    this.classList.add('w--current');
-                    
-                    // Show corresponding pane
-                    const targetTab = this.getAttribute('data-tab');
-                    const targetPane = document.getElementById(targetTab + '-tab');
-                    if (targetPane) {
-                        targetPane.classList.add('w--tab-active');
-                    }
-                });
-            });
-            
-            // FAQ Accordion
-            const accordionItems = document.querySelectorAll('.accordion-item');
-            
-            accordionItems.forEach(item => {
-                const heading = item.querySelector('.accordion-heading');
-                
-                heading.addEventListener('click', function() {
-                    // Close all other accordion items
-                    accordionItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle current item
-                    item.classList.toggle('active');
-                });
-            });
-        });
     </script>
 </body>
 </html>
