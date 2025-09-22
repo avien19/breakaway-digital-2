@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>About - Copora</title>
+    <meta content="Learn more about Copora's consulting services and our team of experts." name="description"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="styles.css?v=20250122" rel="stylesheet" type="text/css"/>
+    <link href="footer.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        /* Basic fallback styles */
+        body { font-family: 'Poppins', Arial, sans-serif; margin: 0; padding: 0; }
+        .navbar { background: white; padding: 1rem 0; border-bottom: 1px solid #eee; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        .grid-nav { display: flex; justify-content: space-between; align-items: center; }
+        .nav-menu { display: flex; gap: 2rem; list-style: none; }
+        .nav-link { text-decoration: none; color: #002748; }
+        .nav-link:hover { color: #4a5568; }
+        .right-nav { display: flex; align-items: center; gap: 1rem; }
+        .nav-right-link { color: #002748; text-decoration: none; font-weight: 500; }
+        .button-link-hover { background: #002748; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; display: inline-block; transition: all 0.3s ease; }
+        .button-link-hover:hover { background: #1a3a5c; transform: translateY(-1px); }
+        
+        /* About Page Styles */
+        .hero-section { padding: 120px 0; background: white; }
+        .container-medium { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
+        .about-title-center { text-align: center; margin-bottom: 4rem; }
+        .about-hero-title { font-size: 3.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.1; color: #002748; }
+        .about-hero-description { font-size: 1.2rem; color: #4a5568; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+        
+        .about-image-wrap { position: relative; margin-top: 2rem; }
+        .about-inner-image { margin-bottom: 2rem; }
+        .hero-inner-image { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; }
+        
+        .grid-about-hero-image { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            gap: 1.5rem; 
+            margin-top: 2rem; 
+        }
+        
+        .about-hero-image-item { 
+            padding: 2rem; 
+            border-radius: 12px; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        
+        .about-hero-image-item.one { 
+            background: linear-gradient(135deg, #4a5568, #2d3748); 
+            color: white; 
+        }
+        
+        .about-hero-image-item.two { 
+            background: #002748; 
+            color: white; 
+        }
+        
+        .about-hero-image-item.third { 
+            background: #f7fafc; 
+            color: #002748; 
+        }
+        
+        .about-inner-text { 
+            font-size: 0.9rem; 
+            color: #ccc; 
+            margin-bottom: 1rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }
+        
+        .about-inner-title { 
+            font-size: 3rem; 
+            font-weight: bold; 
+            margin-bottom: 0.5rem; 
+            color: white; 
+        }
+        
+        .text-white { 
+            color: #ccc; 
+            font-size: 0.9rem; 
+            margin: 0; 
+        }
+        
+        .about-detail-title { 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+            margin-bottom: 1.5rem; 
+            line-height: 1.3; 
+        }
+        
+        .about-text-span { 
+            font-weight: bold; 
+        }
+        
+        .about-pre-title { 
+            font-size: 0.9rem; 
+            color: #666; 
+            margin-bottom: 1rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }
+        
+        .about-info h3 { 
+            font-size: 3rem; 
+            font-weight: bold; 
+            margin-bottom: 0.5rem; 
+            color: #002748; 
+        }
+        
+        .gray-text { 
+            color: #4a5568; 
+            font-size: 0.9rem; 
+            margin: 0; 
+        }
+        
+        .no-margin-bottom { 
+            margin-bottom: 0; 
+        }
+        
+        /* Our Story Section Styles */
+        .our-story-section { 
+            background: #f7fafc; 
+            padding: 6rem 0; 
+        }
+        
+        .section-spacing { 
+            padding: 6rem 0; 
+        }
+        
+        .section-title { 
+            text-align: center; 
+            margin-bottom: 4rem; 
+        }
+        
+        .section-title h2 { 
+            font-size: 3rem; 
+            font-weight: bold; 
+            color: #002748; 
+            line-height: 1.2; 
+            margin-bottom: 0; 
+        }
+        
+        .our-story-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            align-items: start; 
+        }
+        
+        .our-story-detail-item { 
+            padding-right: 2rem; 
+        }
+        
+        .story-description-one { 
+            font-size: 1.1rem; 
+            line-height: 1.7; 
+            color: #4a5568; 
+            margin-bottom: 1.5rem; 
+        }
+        
+        .our-story-detail-item p { 
+            font-size: 1.1rem; 
+            line-height: 1.7; 
+            color: #4a5568; 
+        }
+        
+        .our-story-image-item { 
+            position: relative; 
+        }
+        
+        .grid-our-story-image { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 1rem; 
+            margin-bottom: 2rem; 
+        }
+        
+        .our-story-image-wrap { 
+            position: relative; 
+        }
+        
+        .our-story-image { 
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+        }
+        
+        .lightbox-link { 
+            position: relative; 
+            display: block; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            text-decoration: none; 
+        }
+        
+        .background-video { 
+            width: 100%; 
+            height: 300px; 
+            position: relative; 
+        }
+        
+        .background-video video { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+        
+        .about-hero-overlay { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0; 
+            background: rgba(0, 0, 0, 0.3); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        
+        .our-story-text { 
+            color: white; 
+            font-size: 1.1rem; 
+            font-weight: 600; 
+            text-align: center; 
+        }
+        
+        .our-story-info-wrap { 
+            display: flex; 
+            align-items: center; 
+            gap: 1.5rem; 
+        }
+        
+        .signature { 
+            height: 60px; 
+            width: auto; 
+        }
+        
+        .our-story-info { 
+            flex: 1; 
+        }
+        
+        .our-story-name { 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+            color: #002748; 
+            margin-bottom: 0.25rem; 
+        }
+        
+        .our-story-position { 
+            font-size: 1rem; 
+            color: #4a5568; 
+            font-weight: 500; 
+        }
+        
+        /* Mission, Vision & Core Values Section Styles */
+        .mission-vision-section { 
+            background: white; 
+            padding: 6rem 0; 
+        }
+        
+        .mission-vision-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 3rem; 
+            margin-bottom: 6rem; 
+        }
+        
+        .mission-card, .vision-card { 
+            background: white; 
+            padding: 3rem; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+            border: 1px solid #f0f0f0; 
+            position: relative; 
+        }
+        
+        .vision-card { 
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); 
+            position: relative; 
+            overflow: hidden; 
+        }
+        
+        .vision-card::before { 
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            right: 0; 
+            width: 200px; 
+            height: 200px; 
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23e2e8f0" stroke-width="0.5" opacity="0.3"/><circle cx="50" cy="50" r="25" fill="none" stroke="%23cbd5e0" stroke-width="0.3" opacity="0.2"/></svg>') no-repeat; 
+            background-size: contain; 
+            opacity: 0.1; 
+        }
+        
+        .card-title { 
+            font-size: 2rem; 
+            font-weight: bold; 
+            color: #002748; 
+            margin-bottom: 1.5rem; 
+            line-height: 1.2; 
+        }
+        
+        .card-content { 
+            font-size: 1.1rem; 
+            line-height: 1.7; 
+            color: #4a5568; 
+            margin-bottom: 1.5rem; 
+        }
+        
+        .vision-list { 
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+        }
+        
+        .vision-list li { 
+            font-size: 1.1rem; 
+            color: #4a5568; 
+            margin-bottom: 0.75rem; 
+            position: relative; 
+            padding-left: 1.5rem; 
+        }
+        
+        .vision-list li::before { 
+            content: '•'; 
+            color: #4a5568; 
+            font-weight: bold; 
+            position: absolute; 
+            left: 0; 
+        }
+        
+        .core-values-section { 
+            text-align: center; 
+        }
+        
+        .core-values-title { 
+            font-size: 2.5rem; 
+            font-weight: bold; 
+            color: #002748; 
+            margin-bottom: 3rem; 
+            line-height: 1.2; 
+        }
+        
+        .core-values-grid { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 2rem; 
+            max-width: 800px; 
+            margin: 0 auto; 
+        }
+        
+        .value-item { 
+            background: white; 
+            padding: 2.5rem 2rem; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+            border: 1px solid #f0f0f0; 
+            text-align: center; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+        
+        .value-item:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); 
+        }
+        
+        .value-icon { 
+            font-size: 3rem; 
+            margin-bottom: 1rem; 
+            display: block; 
+        }
+        
+        .value-title { 
+            font-size: 1.3rem; 
+            font-weight: bold; 
+            color: #002748; 
+            margin-bottom: 1rem; 
+        }
+        
+        .value-description { 
+            font-size: 1rem; 
+            line-height: 1.6; 
+            color: #4a5568; 
+            margin: 0; 
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .grid-about-hero-image {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .about-hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .about-inner-title,
+            .about-info h3 {
+                font-size: 2rem;
+            }
+            
+            .our-story-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .our-story-detail-item {
+                padding-right: 0;
+            }
+            
+            .grid-our-story-image {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+            
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .core-values-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                max-width: 100%;
+            }
+            
+            .card-title {
+                font-size: 1.5rem;
+            }
+            
+            .core-values-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .core-values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-card, .vision-card {
+                padding: 2rem;
+            }
+            
+            .value-item {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="grid-nav">
+                <a href="/" class="brand">
+                    <img src="main-icon.png" alt="Main Icon" class="logo-icon"/>
+                    <img src="main-text.png" alt="Main Text" class="logo-text"/>
+                </a>
+                <div class="nav-menu">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about.html" class="nav-link" style="text-decoration: underline;">About</a>
+                    <a href="/who-i-work-with.html" class="nav-link">Who I work with</a>
+                    <a href="/services.html" class="nav-link">Services</a>
+                </div>
+                <div class="right-nav">
+                    <a href="/contact.html" class="button-link-hover">Contact now</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="hero-section">
+        <div class="container-medium">
+            <div class="about-title-center">
+                <h1 class="about-hero-title">Building better businesses with smart strategy</h1>
+                <p class="about-hero-description">We're a forward-thinking consulting agency helping businesses grow smarter, scale faster, and lead with clarity.</p>
+            </div>
+            
+            <div class="about-image-wrap">
+                <div class="about-inner-image">
+                    <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/68414b23e4a1780f6e00358a_2163272981e07765b1f7275f01ced92a_about-hero-image.jpg" 
+                         alt="Two professionals discussing business strategy" 
+                         class="hero-inner-image">
+                </div>
+                
+                <div class="grid-about-hero-image">
+                    <!-- Card 1: Business Transformed -->
+                    <div class="about-hero-image-item one">
+                        <div class="about-inner-text-wrap">
+                            <div class="about-inner-text">Business transformed</div>
+                        </div>
+                        <div class="about-inner-title-wrap">
+                            <h2 class="about-inner-title">260+</h2>
+                            <p class="text-white">Helping companies grow and perform better.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2: 24/7 Support -->
+                    <div class="about-hero-image-item two">
+                        <h3 class="about-detail-title">
+                            24/7 support to keep your <span class="about-text-span">business moving forward</span>
+                        </h3>
+                        <a href="/contact.html" class="button-link-hover" style="background: white; color: #002748;">
+                            Get in touch
+                        </a>
+                    </div>
+                    
+                    <!-- Card 3: Years of Experience -->
+                    <div class="about-hero-image-item third">
+                        <div class="about-inner-pre-title">
+                            <div class="about-pre-title">Years for experiences</div>
+                        </div>
+                        <div class="about-info">
+                            <h3 class="no-margin-bottom">6+</h3>
+                            <p class="gray-text">Years helping businesses thrive</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story-section section-spacing">
+        <div class="w-layout-blockcontainer container w-container">
+            <div class="section-title">
+                <h2 class="no-margin-bottom">Built on expertise, driven by results — Get to know us</h2>
+            </div>
+            <div class="w-layout-grid our-story-grid">
+                <div class="our-story-detail-item">
+                    <p class="story-description-one">We didn't start with a big boardroom — just a big idea: to make business consulting more human, strategic, and impact-driven. Founded by professionals who've lived through both corporate complexity and startup chaos, we understand what it takes to scale smart, pivot fast, and stay competitive.</p>
+                    <p class="no-margin-bottom">From helping early-stage ventures define their roadmap to guiding enterprises through digital transformation, our journey has always been about one thing — unlocking clarity and measurable growth for every client. Today, we're proud to be the go-to partner for businesses ready to think bigger and move faster, backed by strategy that works. We follow a strategic four-step approach designed to drive measurable results. From deep discovery to ongoing optimization, every step is focused on moving your business forward with clarity, efficiency, and impact.</p>
+                </div>
+                <div class="our-story-image-item">
+                    <div class="w-layout-grid grid-our-story-image">
+                        <div class="our-story-image-wrap">
+                            <img src="https://cdn.prod.website-files.com/6393940aeb92f045cfe2b12c/676eb453df8b0e80a4dad72c_Path-for-Growth-Image-6.avif" 
+                                 loading="eager" 
+                                 alt="Professional collaboration in modern office" 
+                                 class="our-story-image"/>
+                        </div>
+                    </div>
+                    <div class="our-story-info-wrap">
+                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/68418d25fc6d6b5823aaf385_story-signature.svg" 
+                             loading="eager" 
+                             alt="Carlos Mendes Signature" 
+                             class="signature"/>
+                        <div class="our-story-info">
+                            <h3 class="our-story-name">Carlos Mendes</h3>
+                            <div class="our-story-position">CEO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision & Core Values Section -->
+    <section class="mission-vision-section section-spacing">
+        <div class="w-layout-blockcontainer container w-container">
+            <div class="mission-vision-grid">
+                <!-- Mission Card -->
+                <div class="mission-card">
+                    <h3 class="card-title">Our Mission</h3>
+                    <p class="card-content">To empower businesses of all sizes to unlock their full potential through strategic insight, tailored consulting, and measurable results. We are committed to delivering innovative solutions that drive sustainable growth, operational excellence, and long-term success for our clients.</p>
+                </div>
+                
+                <!-- Vision Card -->
+                <div class="vision-card">
+                    <h3 class="card-title">Our Vision</h3>
+                    <p class="card-content">We aim to lead the way in reshaping how businesses grow, adapt, and lead in a changing world.</p>
+                    <ul class="vision-list">
+                        <li>Global impact</li>
+                        <li>Innovative thinking</li>
+                        <li>Empowering growth</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Core Values Section -->
+            <div class="core-values-section">
+                <h2 class="core-values-title">Our Core Values</h2>
+                <div class="core-values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">🎯</div>
+                        <h4 class="value-title">Excellence</h4>
+                        <p class="value-description">We strive for the highest standards in everything we do, delivering exceptional results that exceed expectations.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🤝</div>
+                        <h4 class="value-title">Integrity</h4>
+                        <p class="value-description">We conduct business with honesty, transparency, and ethical practices in all our interactions.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">💡</div>
+                        <h4 class="value-title">Innovation</h4>
+                        <p class="value-description">We embrace creative thinking and cutting-edge solutions to solve complex business challenges.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🚀</div>
+                        <h4 class="value-title">Growth</h4>
+                        <p class="value-description">We are committed to continuous improvement and helping our clients achieve sustainable growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section - Loaded via JavaScript -->
+    <div id="footer-container"></div>
+
+    <!-- Load Footer -->
+    <script>
+        // Load footer content
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                // Fallback footer if loading fails
+                document.getElementById('footer-container').innerHTML = '<footer class="footer-section" style="background: #002748; color: white; padding: 4rem 0 2rem;"><div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 40px;"><p style="text-align: center; color: white; padding: 2rem;">© 2024 Copora. All rights reserved.</p></div></footer>';
+            });
+    </script>
+</body>
+</html>

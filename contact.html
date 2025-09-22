@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Contact Us - Copora</title>
+    <meta content="Get in touch with our expert consulting team. We're ready to help solve your business challenges and drive growth." name="description"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="styles.css?v=20250122" rel="stylesheet" type="text/css"/>
+    <link href="footer.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        /* Basic fallback styles */
+        body { font-family: 'Poppins', Arial, sans-serif; margin: 0; padding: 0; }
+        .navbar { background: white; padding: 1rem 0; border-bottom: 1px solid #eee; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        .grid-nav { display: flex; justify-content: space-between; align-items: center; }
+        .nav-menu { display: flex; gap: 2rem; list-style: none; }
+        .nav-link { text-decoration: none; color: #002748; }
+        .nav-link:hover { color: #4a5568; }
+        .nav-link.w--current { text-decoration: underline; }
+        .right-nav { display: flex; align-items: center; gap: 1rem; }
+        .nav-right-link { color: #002748; text-decoration: none; font-weight: 500; }
+        .button-link-hover { background: #002748; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; display: inline-block; transition: all 0.3s ease; }
+        .button-link-hover:hover { background: #1a3a5c; transform: translateY(-1px); }
+        
+        /* Contact Page Styles */
+        .hero-section { padding: 120px 0; background: white; }
+        .hero-contact-wrap { text-align: center; margin-bottom: 4rem; }
+        .hero-contact-wrap h1 { font-size: 3.5rem; font-weight: bold; color: #002748; margin-bottom: 1.5rem; line-height: 1.1; }
+        .hero-contact-wrap p { font-size: 1.2rem; color: #4a5568; max-width: 600px; margin: 0 auto 3rem; line-height: 1.6; }
+        
+        .grid-contact { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            align-items: start; 
+        }
+        
+        .contact-form-item { }
+        .contact-form { }
+        .grid-form-input { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 1.5rem; 
+            margin-bottom: 1.5rem; 
+        }
+        .input-group { }
+        .form-input-label { 
+            display: block; 
+            font-weight: 500; 
+            color: #002748; 
+            margin-bottom: 0.5rem; 
+            font-size: 0.9rem; 
+        }
+        .form-input { 
+            width: 100%; 
+            padding: 1rem; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            font-size: 1rem; 
+            transition: border-color 0.3s ease; 
+        }
+        .form-input:focus { 
+            outline: none; 
+            border-color: #002748; 
+        }
+        .form-textarea { 
+            min-height: 120px; 
+            resize: vertical; 
+        }
+        .form-select { 
+            width: 100%; 
+            padding: 1rem; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            font-size: 1rem; 
+            background: white; 
+            cursor: pointer; 
+        }
+        .contact-button-wrap { 
+            margin-top: 2rem; 
+        }
+        .contact-button-wrap .button-link-hover { 
+            width: 100%; 
+            text-align: center; 
+            padding: 1rem 2rem; 
+            font-size: 1.1rem; 
+        }
+        
+        .contact-image-wrap { }
+        .contact-image { 
+            width: 100%; 
+            height: 500px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+        }
+        
+        /* Contact Info Section */
+        .contact-info-section { 
+            background: #f8f9fa; 
+            padding: 6rem 0; 
+        }
+        .grid-contact-info { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            margin-bottom: 3rem; 
+        }
+        .contact-info-image-wrap { }
+        .contact-info-image { 
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+        }
+        .contact-info-item-wrap { }
+        .contact-info-item { }
+        .contact-info-title { 
+            font-size: 2rem; 
+            font-weight: bold; 
+            color: #002748; 
+            margin-bottom: 1rem; 
+        }
+        .contact-info-address { 
+            font-size: 1.1rem; 
+            color: #4a5568; 
+            margin-bottom: 1rem; 
+        }
+        .contact-link { 
+            color: #002748; 
+            text-decoration: none; 
+            font-weight: 500; 
+            font-size: 1.1rem; 
+        }
+        .contact-link:hover { 
+            text-decoration: underline; 
+        }
+        
+        .contact-details-item { 
+            background: #002748; 
+            color: white; 
+            padding: 2rem; 
+            border-radius: 12px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .contact-inner-detail { }
+        .contact-inner-title { 
+            font-size: 1rem; 
+            font-weight: bold; 
+            margin-bottom: 0.5rem; 
+            color: #ccc; 
+        }
+        .contact-inner-divider { 
+            width: 1px; 
+            height: 20px; 
+            background: #666; 
+            margin: 0 1rem; 
+        }
+        .inner-link { 
+            color: white; 
+            text-decoration: none; 
+        }
+        .inner-link:hover { 
+            color: #ccc; 
+        }
+        .social-media-item { 
+            display: flex; 
+            gap: 1rem; 
+        }
+        .social-media-link { 
+            display: inline-block; 
+            transition: transform 0.3s ease; 
+        }
+        .social-media-link:hover { 
+            transform: translateY(-2px); 
+        }
+        .social-icon { 
+            width: 24px; 
+            height: 24px; 
+        }
+        
+        /* CTA Section */
+        .cta-section { 
+            background: white; 
+            padding: 6rem 0; 
+        }
+        .container-medium { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 0 40px; 
+        }
+        .grid-cta { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            align-items: center; 
+        }
+        .cta-main-wrap { }
+        .cta-wrap { }
+        .cta-title { 
+            font-size: 3rem; 
+            font-weight: bold; 
+            color: #002748; 
+            margin-bottom: 2rem; 
+            line-height: 1.2; 
+        }
+        .cta-info { 
+            display: flex; 
+            align-items: center; 
+            gap: 1rem; 
+        }
+        .cta-info-title { 
+            font-size: 1.1rem; 
+            color: #4a5568; 
+            margin-right: 1rem; 
+        }
+        .cta-icon-wrap { }
+        .cta-icon { 
+            width: 20px; 
+            height: 20px; 
+        }
+        .cta-avatar-list { 
+            display: flex; 
+            align-items: center; 
+            gap: -0.5rem; 
+        }
+        .avatar-image-item { 
+            margin-left: -8px; 
+        }
+        .avatar-image-item:first-child { 
+            margin-left: 0; 
+        }
+        .avatar-image-wrap { 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            overflow: hidden; 
+            border: 3px solid white; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+        }
+        .avatar-image { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+        
+        .cta-image-wrap { 
+            position: relative; 
+        }
+        .cta-overlay { 
+            position: absolute; 
+            top: 20px; 
+            right: 20px; 
+        }
+        .cta-button .button-link-hover { 
+            background: white; 
+            color: #002748; 
+        }
+        .cta-button .button-link-hover:hover { 
+            background: #f8f8f8; 
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .grid-contact {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .grid-contact-info {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .grid-cta {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-details-item {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .contact-inner-divider {
+                display: none;
+            }
+            
+            .hero-contact-wrap h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cta-title {
+                font-size: 2.5rem;
+            }
+            
+            .grid-form-input {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="grid-nav">
+                <a href="/" class="brand">
+                    <img src="main-icon.png" alt="Main Icon" class="logo-icon"/>
+                    <img src="main-text.png" alt="Main Text" class="logo-text"/>
+                </a>
+                <div class="nav-menu">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                    <a href="/who-i-work-with.html" class="nav-link">Who I work with</a>
+                    <a href="/services.html" class="nav-link">Services</a>
+                </div>
+                <div class="right-nav">
+                    <a href="/contact.html" class="button-link-hover w--current">Contact now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-contact-wrap">
+                <h1>Have a business challenge? We're ready to help</h1>
+                <p>Whether you're ready to scale, solve a business challenge, or explore a partnership—we're here to help.</p>
+            </div>
+            
+            <div class="grid-contact">
+                <!-- Contact Form -->
+                <div class="contact-form-item">
+                    <div class="contact-form">
+                        <form id="contact-form" name="contact-form" method="post">
+                            <div class="grid-form-input">
+                                <div class="input-group">
+                                    <label for="name" class="form-input-label">Your name*</label>
+                                    <input class="form-input" name="name" type="text" id="name" required/>
+                                </div>
+                                <div class="input-group">
+                                    <label for="email" class="form-input-label">Email Address*</label>
+                                    <input class="form-input" name="email" type="email" id="email" required/>
+                                </div>
+                            </div>
+                            <div class="grid-form-input">
+                                <div class="input-group">
+                                    <label for="phone" class="form-input-label">Phone number</label>
+                                    <input class="form-input" name="phone" type="tel" id="phone"/>
+                                </div>
+                                <div class="input-group">
+                                    <label for="services" class="form-input-label">Services</label>
+                                    <select id="services" name="services" class="form-select">
+                                        <option value="">Select one...</option>
+                                        <option value="Business Strategy">Business Strategy</option>
+                                        <option value="Process optimization">Process optimization</option>
+                                        <option value="Financial advisory">Financial advisory</option>
+                                        <option value="Market research">Market research</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="message" class="form-input-label">Message</label>
+                                <textarea id="message" name="message" class="form-input form-textarea" rows="5"></textarea>
+                            </div>
+                            <div class="contact-button-wrap">
+                                <button type="submit" class="button-link-hover">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Contact Image -->
+                <div class="contact-image-wrap">
+                    <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/68428f2dc02fae853004580c_0b5ae92944131d04bdc9a374549e0299_contact-bg-image.jpg" 
+                         alt="Professional team working in modern office" 
+                         class="contact-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="grid-contact-info">
+                <div class="contact-info-image-wrap">
+                    <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/684299b1f754c956e8743211_8d641f28ecc9c47542e3b261ba326669_contact-info-image.jpg" 
+                         alt="City landscape with business buildings" 
+                         class="contact-info-image">
+                </div>
+                <div class="contact-info-item-wrap">
+                    <div class="contact-info-item">
+                        <h2 class="contact-info-title">Business consulting agency Copora</h2>
+                        <p class="contact-info-address">Chicago HQ Estica Cop. Macomb, MI 48042</p>
+                        <a href="mailto:contact@copora.com" class="contact-link">contact@copora.com</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-details-item">
+                <div class="contact-inner-detail">
+                    <h3 class="contact-inner-title">Contact on:</h3>
+                    <a href="mailto:contact@copora.com" class="contact-link inner-link">contact@copora.com</a>
+                    <div class="contact-inner-divider"></div>
+                    <a href="tel:+1234567890" class="contact-link inner-link">+123 456 7890</a>
+                </div>
+                <div class="contact-inner-detail">
+                    <h3 class="contact-inner-title">Social media:</h3>
+                    <div class="social-media-item">
+                        <a href="https://www.facebook.com/" class="social-media-link">
+                            <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/682eb96f62a81d664ea5253b_99aeb9cadc4027f13a9f8c64a73729ed_facebook.svg" alt="Facebook" class="social-icon"/>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social-media-link">
+                            <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/682eb96f62a81d664ea524cf_79d504e95605676dcdc62eb376426c90_instagram.svg" alt="Instagram" class="social-icon"/>
+                        </a>
+                        <a href="https://www.linkedin.com/" class="social-media-link">
+                            <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/682eb96f62a81d664ea524df_f6064f30ebfbad78aefda8115a908970_twitter.svg" alt="LinkedIn" class="social-icon"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container-medium">
+            <div class="grid-cta">
+                <div class="cta-main-wrap">
+                    <div class="cta-wrap">
+                        <h2 class="cta-title">Let's build something that moves your business forward</h2>
+                        <div class="cta-info">
+                            <div class="cta-info-title">Talk to our experts</div>
+                            <div class="cta-icon-wrap">
+                                <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/683d273f534204f62c0f48cb_plus-icon.svg" alt="Plus icon" class="cta-icon"/>
+                            </div>
+                            <div class="cta-avatar-list">
+                                <div class="avatar-image-item">
+                                    <div class="avatar-image-wrap">
+                                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/683d2d05d00a93e7ae267f3f_e24aa2f05c8041e6c7d2b276720729e6_Stylish%20Urban%20Portrait.jpg" alt="Alex Carry" class="avatar-image"/>
+                                    </div>
+                                </div>
+                                <div class="avatar-image-item">
+                                    <div class="avatar-image-wrap">
+                                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/6836e5f5a4694c074d2325de_52291f00d7062ab738d0995727ef25e8_Smiling%20Asian%20Woman.jpg" alt="Amanda Lewis" class="avatar-image"/>
+                                    </div>
+                                </div>
+                                <div class="avatar-image-item">
+                                    <div class="avatar-image-wrap">
+                                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/683d2d05bb11df9731bbbb82_ae9466b28e09acb4d6157ce147931125_Portrait%20of%20a%20Smiling%20Man.jpg" alt="David Hassan" class="avatar-image"/>
+                                    </div>
+                                </div>
+                                <div class="avatar-image-item">
+                                    <div class="avatar-image-wrap">
+                                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/683d2d05561133a4d29c7166_62dda3b974495834a1fcd4ae2318bfb4_Smiling%20Asian%20Woman%20with%20Soft%20Background.jpg" alt="Elena Novak" class="avatar-image"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-image-wrap">
+                    <img src="https://www.asta.com.au/media/1477/pexels-fauxels-3184665.jpg" 
+                         alt="Modern office desk setup" 
+                         class="contact-image">
+                    <div class="cta-overlay">
+                        <div class="cta-button">
+                            <a href="/contact.html" class="button-link-hover">Book a call</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section - Loaded via JavaScript -->
+    <div id="footer-container"></div>
+
+    <!-- Load Footer -->
+    <script>
+        // Load footer content
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                // Fallback footer if loading fails
+                document.getElementById('footer-container').innerHTML = '<footer class="footer-section" style="background: #002748; color: white; padding: 4rem 0 2rem;"><div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 40px;"><p style="text-align: center; color: white; padding: 2rem;">© 2024 Copora. All rights reserved.</p></div></footer>';
+            });
+    </script>
+
+    <!-- Form Submission Script -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+        });
+    </script>
+</body>
+</html>

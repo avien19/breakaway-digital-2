@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Who I Work With - Copora</title>
+    <meta content="Discover the industries and types of businesses I work with to drive growth and success." name="description"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="styles.css?v=20250122" rel="stylesheet" type="text/css"/>
+    <link href="footer.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        /* Basic fallback styles */
+        body { font-family: 'Poppins', Arial, sans-serif; margin: 0; padding: 0; }
+        .navbar { background: white; padding: 1rem 0; border-bottom: 1px solid #eee; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        .grid-nav { display: flex; justify-content: space-between; align-items: center; }
+        .nav-menu { display: flex; gap: 2rem; list-style: none; }
+        .nav-link { text-decoration: none; color: #002748; }
+        .nav-link:hover { color: #4a5568; }
+        .nav-link.w--current { text-decoration: underline; }
+        .right-nav { display: flex; align-items: center; gap: 1rem; }
+        .button-link-hover { background: #002748; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; display: inline-block; transition: all 0.3s ease; }
+        .button-link-hover:hover { background: #1a3a5c; transform: translateY(-1px); }
+        
+        /* Who I Work With Page Styles */
+        .hero-section { padding: 120px 0; background: white; }
+        .hero-contact-wrap { text-align: center; margin-bottom: 4rem; }
+        .hero-contact-wrap h1 { font-size: 3.5rem; font-weight: bold; color: #002748; margin-bottom: 1.5rem; line-height: 1.1; }
+        .hero-contact-wrap p { font-size: 1.2rem; color: #4a5568; max-width: 600px; margin: 0 auto 3rem; line-height: 1.6; }
+        
+        /* Industries Section */
+        .industries-section { 
+            background: #f8f9fa; 
+            padding: 6rem 0; 
+        }
+        
+        .section-title { 
+            text-align: center; 
+            margin-bottom: 4rem; 
+        }
+        
+        .section-title h2 { 
+            font-size: 3rem; 
+            font-weight: bold; 
+            color: #002748; 
+            line-height: 1.2; 
+            margin-bottom: 1rem; 
+        }
+        
+        .section-description { 
+            font-size: 1.2rem; 
+            color: #4a5568; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            line-height: 1.6; 
+        }
+        
+        .industries-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 2rem; 
+            margin-top: 3rem; 
+        }
+        
+        .industry-card { 
+            background: white; 
+            padding: 3rem 2rem; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+            border: 1px solid #f0f0f0; 
+            text-align: center; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+        
+        .industry-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); 
+        }
+        
+        .industry-icon { 
+            margin-bottom: 1.5rem; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .industry-title { 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+            color: #002748; 
+            margin-bottom: 1rem; 
+        }
+        
+        .industry-description { 
+            font-size: 1rem; 
+            line-height: 1.6; 
+            color: #4a5568; 
+            margin: 0; 
+        }
+        
+        /* Business Types Section */
+        .business-types-section { 
+            background: white; 
+            padding: 6rem 0; 
+        }
+        
+        .business-types-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            align-items: center; 
+        }
+        
+        .business-types-content { 
+            max-width: 600px; 
+        }
+        
+        .business-types-title { 
+            font-size: 2.5rem; 
+            font-weight: bold; 
+            color: #002748; 
+            margin-bottom: 1.5rem; 
+            line-height: 1.2; 
+        }
+        
+        .business-types-description { 
+            font-size: 1.1rem; 
+            color: #4a5568; 
+            margin-bottom: 2rem; 
+            line-height: 1.6; 
+        }
+        
+        .business-types-list { 
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+        }
+        
+        .business-types-list li { 
+            font-size: 1.1rem; 
+            color: #4a5568; 
+            margin-bottom: 1rem; 
+            position: relative; 
+            padding-left: 2rem; 
+        }
+        
+        .business-types-list li::before { 
+            content: '✓'; 
+            color: #002748; 
+            font-weight: bold; 
+            position: absolute; 
+            left: 0; 
+            top: 0; 
+        }
+        
+        .business-types-image { 
+            position: relative; 
+        }
+        
+        .business-types-main-image { 
+            width: 100%; 
+            height: 400px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); 
+        }
+        
+        /* My Approach Section */
+        .approach-section { 
+            background: #002748; 
+            color: white; 
+            padding: 6rem 0; 
+        }
+        
+        .approach-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            align-items: center; 
+        }
+        
+        .approach-content { 
+            max-width: 600px; 
+        }
+        
+        .approach-label { 
+            color: #888; 
+            font-size: 0.9rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            margin-bottom: 1rem; 
+        }
+        
+        .approach-title { 
+            font-size: 3rem; 
+            font-weight: bold; 
+            margin-bottom: 1.5rem; 
+            line-height: 1.2; 
+        }
+        
+        .approach-description { 
+            color: #ccc; 
+            font-size: 1.1rem; 
+            line-height: 1.6; 
+            margin-bottom: 2rem; 
+        }
+        
+        .approach-steps { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 1.5rem; 
+        }
+        
+        .approach-step { 
+            display: flex; 
+            align-items: center; 
+            gap: 1rem; 
+        }
+        
+        .step-number { 
+            background: #F05A2B; 
+            color: white; 
+            width: 40px; 
+            height: 40px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-weight: bold; 
+            font-size: 1.1rem; 
+        }
+        
+        .step-content { 
+            flex: 1; 
+        }
+        
+        .step-title { 
+            font-size: 1.2rem; 
+            font-weight: bold; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .step-description { 
+            color: #ccc; 
+            font-size: 1rem; 
+            line-height: 1.5; 
+        }
+        
+        .approach-image { 
+            position: relative; 
+        }
+        
+        .approach-main-image { 
+            width: 100%; 
+            height: 500px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+        }
+        
+        .approach-cta { 
+            position: absolute; 
+            bottom: 20px; 
+            left: 20px; 
+            right: 20px; 
+        }
+        
+        .approach-button { 
+            background: white; 
+            color: #002748; 
+            padding: 1rem 1.5rem; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            display: block; 
+            text-align: center; 
+            transition: all 0.3s ease; 
+        }
+        
+        .approach-button:hover { 
+            background: #f0f0f0; 
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+        }
+        
+        /* CTA Section */
+        .cta-section { 
+            background: white; 
+            padding: 6rem 0; 
+        }
+        
+        .container-medium { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 0 40px; 
+        }
+        
+        .grid-cta { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            align-items: center; 
+        }
+        
+        .cta-content { 
+            max-width: 600px; 
+        }
+        
+        .cta-title { 
+            font-size: 3rem; 
+            font-weight: bold; 
+            color: #002748; 
+            margin-bottom: 2rem; 
+            line-height: 1.2; 
+        }
+        
+        .cta-description { 
+            font-size: 1.1rem; 
+            color: #4a5568; 
+            margin-bottom: 2rem; 
+            line-height: 1.6; 
+        }
+        
+        .cta-image-wrap { 
+            position: relative; 
+        }
+        
+        .cta-main-image { 
+            width: 100%; 
+            height: 400px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+        }
+        
+        .cta-overlay { 
+            position: absolute; 
+            top: 20px; 
+            right: 20px; 
+        }
+        
+        .cta-button .button-link-hover { 
+            background: white; 
+            color: #002748; 
+        }
+        
+        .cta-button .button-link-hover:hover { 
+            background: #f8f8f8; 
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .industries-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .business-types-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .approach-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .grid-cta {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-contact-wrap h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+            
+            .business-types-title {
+                font-size: 2rem;
+            }
+            
+            .approach-title {
+                font-size: 2.5rem;
+            }
+            
+            .cta-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero-contact-wrap h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .business-types-title {
+                font-size: 1.8rem;
+            }
+            
+            .approach-title {
+                font-size: 2rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .industry-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="grid-nav">
+                <a href="/" class="brand">
+                    <img src="main-icon.png" alt="Main Icon" class="logo-icon"/>
+                    <img src="main-text.png" alt="Main Text" class="logo-text"/>
+                </a>
+                <div class="nav-menu">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                    <a href="/who-i-work-with.html" class="nav-link w--current">Who I work with</a>
+                    <a href="/services.html" class="nav-link">Services</a>
+                </div>
+                <div class="right-nav">
+                    <a href="/contact.html" class="button-link-hover">Contact now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="w-layout-grid grid-hero">
+                <div class="hero-content-wrap">
+                    <div class="hero-title-wrap">
+                        <h1 class="hero-title">Industries I work with</h1>
+                        <p>I partner with businesses across diverse sectors to drive growth, optimize operations, and achieve sustainable success through strategic consulting.</p>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="/contact.html" class="button-link-hover">Start working together</a>
+                    </div>
+                    <div class="hero-bottom-wrap">
+                        <div class="hero-description-wrap">
+                            <div class="hero-sm-text">Trusted by 260+ businesses</div>
+                            <p class="hero-description">Across 15+ industries worldwide</p>
+                        </div>
+                        <div class="hero-item-wrap">
+                            <div class="hero-city-image-wrap">
+                                <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/6830493ba0c1b152a02b87df_hero-sm-image-01.jpg" alt="Technology" class="hero-city-image"/>
+                                <div class="hero-city-text">Tech</div>
+                            </div>
+                            <div class="hero-city-image-wrap">
+                                <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/6830493b27791a78a9f46410_hero-sm-image-02.jpg" alt="Healthcare" class="hero-city-image"/>
+                                <div class="hero-city-text">Health</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image-wrap">
+                    <div class="hero-image-one-wrap">
+                        <img class="hero-image-one" src="https://www.asta.com.au/media/1477/pexels-fauxels-3184665.jpg" alt="Professional team working"/>
+                    </div>
+                    <div class="hero-detail-image-wrap">
+                        <div class="hero-detail-item">
+                            <p class="hero-detail-description">"The consultant helped us transform our operations and achieve 40% growth in just 6 months."</p>
+                            <div class="hero-avatar-image-wrap">
+                                <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/68314ec582b2956a9125402e_hero-image-02.jpg" alt="Client" class="hero-avatar-image"/>
+                                <div class="hero-avatar-info">
+                                    <div class="hero-avatar-title">Sarah Johnson</div>
+                                    <div class="hero-avatar-text">CEO, TechCorp</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-bg-image-wrap">
+                            <img src="https://www.asta.com.au/media/1482/pexels-rebrand-cities-1367271.jpg" alt="Team collaboration" class="hero-image-two"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="w-layout-grid grid-about">
+                <div class="about-content">
+                    <!-- KPI Stats -->
+                    <div class="kpi-stats">
+                        <div class="kpi-item">
+                            <div class="kpi-label">Industries served</div>
+                            <div class="kpi-number">15+</div>
+                            <div class="kpi-description">Diverse sectors with proven expertise</div>
+                        </div>
+                        <div class="kpi-item">
+                            <div class="kpi-label">Success rate</div>
+                            <div class="kpi-number">95%</div>
+                            <div class="kpi-description">Client satisfaction across all industries</div>
+                        </div>
+                        <div class="kpi-item">
+                            <div class="kpi-label">Average growth</div>
+                            <div class="kpi-number">40%</div>
+                            <div class="kpi-description">Revenue increase for clients</div>
+                        </div>
+                    </div>
+                    
+                    <!-- About Content -->
+                    <div class="about-text">
+                        <div class="about-label">Industry Expertise</div>
+                        <h2 class="about-title">Deep knowledge across diverse sectors</h2>
+                        <p class="about-description">I bring specialized industry insights and proven methodologies to help businesses in various sectors overcome unique challenges and achieve sustainable growth.</p>
+                        <a href="/contact.html" class="about-button">Discuss your industry</a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://www.asta.com.au/media/1479/pexels-jonathan-borba-3285200.jpg" 
+                         alt="Professional team working across industries" 
+                         class="about-main-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Industries I specialize in</h2>
+                <p class="section-description">From technology startups to established enterprises, I bring deep industry knowledge and proven strategies to help businesses thrive.</p>
+            </div>
+            
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/683d273f534204f62c0f48cb_plus-icon.svg" alt="Technology" style="width: 40px; height: 40px; opacity: 0.8;"/>
+                    </div>
+                    <h3 class="industry-title">Technology</h3>
+                    <p class="industry-description">SaaS companies, tech startups, and digital transformation initiatives looking to scale and optimize their operations.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/683d273f534204f62c0f48cb_plus-icon.svg" alt="Healthcare" style="width: 40px; height: 40px; opacity: 0.8;"/>
+                    </div>
+                    <h3 class="industry-title">Healthcare</h3>
+                    <p class="industry-description">Healthcare providers, medical technology companies, and health services organizations seeking operational excellence.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/683d273f534204f62c0f48cb_plus-icon.svg" alt="Financial Services" style="width: 40px; height: 40px; opacity: 0.8;"/>
+                    </div>
+                    <h3 class="industry-title">Financial Services</h3>
+                    <p class="industry-description">Banks, fintech companies, and financial institutions focused on digital transformation and process optimization.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/683d273f534204f62c0f48cb_plus-icon.svg" alt="Manufacturing" style="width: 40px; height: 40px; opacity: 0.8;"/>
+                    </div>
+                    <h3 class="industry-title">Manufacturing</h3>
+                    <p class="industry-description">Manufacturing companies looking to improve efficiency, reduce costs, and implement lean methodologies.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/683d273f534204f62c0f48cb_plus-icon.svg" alt="Retail" style="width: 40px; height: 40px; opacity: 0.8;"/>
+                    </div>
+                    <h3 class="industry-title">Retail & E-commerce</h3>
+                    <p class="industry-description">Retail businesses and e-commerce platforms seeking to optimize supply chains and customer experience.</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/683d273f534204f62c0f48cb_plus-icon.svg" alt="Education" style="width: 40px; height: 40px; opacity: 0.8;"/>
+                    </div>
+                    <h3 class="industry-title">Education</h3>
+                    <p class="industry-description">Educational institutions and edtech companies focused on improving learning outcomes and operational efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="client-main-wrap">
+                <div>Trusted by industry leaders</div>
+                <div class="client-list-item">
+                    <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/682eb96f62a81d664ea52504_d2fe734707d1f0b2b04ac207432ad594_saash.svg" alt="Client 1" class="client-item"/>
+                    <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/682eb96f62a81d664ea52504_d2fe734707d1f0b2b04ac207432ad594_saash.svg" alt="Client 2" class="client-item"/>
+                    <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/682eb96f62a81d664ea52504_d2fe734707d1f0b2b04ac207432ad594_saash.svg" alt="Client 3" class="client-item"/>
+                    <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/682eb96f62a81d664ea52504_d2fe734707d1f0b2b04ac207432ad594_saash.svg" alt="Client 4" class="client-item"/>
+                    <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/682eb96f62a81d664ea52504_d2fe734707d1f0b2b04ac207432ad594_saash.svg" alt="Client 5" class="client-item"/>
+                </div>
+                <div class="decoration-bg-wrap">
+                    <div class="decoration-bg-text">Across multiple industries</div>
+                    <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/683d273f534204f62c0f48cb_plus-icon.svg" alt="Plus" class="decorative-icon"/>
+                    <div class="decoration-bg-text">Proven results</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Types Section -->
+    <section class="business-types-section">
+        <div class="container">
+            <div class="business-types-grid">
+                <div class="business-types-content">
+                    <h2 class="business-types-title">Types of businesses I work with</h2>
+                    <p class="business-types-description">I partner with organizations of all sizes, from ambitious startups to established enterprises, each with unique challenges and opportunities.</p>
+                    
+                    <ul class="business-types-list">
+                        <li>Startups and early-stage companies</li>
+                        <li>Scale-up businesses ready for growth</li>
+                        <li>Mid-market companies seeking optimization</li>
+                        <li>Large enterprises undergoing transformation</li>
+                        <li>Family-owned businesses</li>
+                        <li>Non-profit organizations</li>
+                    </ul>
+                </div>
+                
+                <div class="business-types-image">
+                    <img src="https://www.asta.com.au/media/1493/pexels-fauxels-3182759.jpg" 
+                         alt="Professional team collaboration in modern office" 
+                         class="business-types-main-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Approach Section -->
+    <section class="approach-section">
+        <div class="container">
+            <div class="approach-grid">
+                <div class="approach-content">
+                    <div class="approach-label">My approach</div>
+                    <h2 class="approach-title">How I work with your industry</h2>
+                    <p class="approach-description">I bring industry-specific expertise and a proven methodology to help your business overcome challenges and achieve sustainable growth.</p>
+                    
+                    <div class="approach-steps">
+                        <div class="approach-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <div class="step-title">Industry Analysis</div>
+                                <div class="step-description">Deep dive into your industry landscape, competitive dynamics, and market opportunities.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="approach-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <div class="step-title">Custom Strategy</div>
+                                <div class="step-description">Develop tailored strategies that align with your industry's unique characteristics and challenges.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="approach-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <div class="step-title">Implementation</div>
+                                <div class="step-description">Execute strategies with industry-specific best practices and proven methodologies.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="approach-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <div class="step-title">Optimization</div>
+                                <div class="step-description">Continuously monitor and optimize performance to ensure sustainable growth and success.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="approach-image">
+                    <img src="https://www.asta.com.au/media/1477/pexels-fauxels-3184665.jpg" 
+                         alt="Professional working on strategy" 
+                         class="approach-main-image">
+                    <div class="approach-cta">
+                        <a href="/contact.html" class="approach-button">Ready to work together?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container-medium">
+            <div class="grid-cta">
+                <div class="cta-content">
+                    <h2 class="cta-title">Let's discuss your industry challenges</h2>
+                    <p class="cta-description">Whether you're in technology, healthcare, manufacturing, or any other sector, I'm here to help you navigate industry-specific challenges and unlock growth opportunities.</p>
+                    <a href="/contact.html" class="button-link-hover">Start the conversation</a>
+                </div>
+                
+                <div class="cta-image-wrap">
+                    <img src="https://cdn.prod.website-files.com/682eb96f62a81d664ea524a9/68428f2dc02fae853004580c_0b5ae92944131d04bdc9a374549e0299_contact-bg-image.jpg" 
+                         alt="Professional team discussing strategy" 
+                         class="cta-main-image">
+                    <div class="cta-overlay">
+                        <div class="cta-button">
+                            <a href="/contact.html" class="button-link-hover">Book a consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section - Loaded via JavaScript -->
+    <div id="footer-container"></div>
+
+    <!-- Load Footer -->
+    <script>
+        // Load footer content
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                // Fallback footer if loading fails
+                document.getElementById('footer-container').innerHTML = '<footer class="footer-section" style="background: #002748; color: white; padding: 4rem 0 2rem;"><div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 40px;"><p style="text-align: center; color: white; padding: 2rem;">© 2024 Copora. All rights reserved.</p></div></footer>';
+            });
+    </script>
+</body>
+</html>
